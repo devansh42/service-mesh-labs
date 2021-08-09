@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Waiting for the environment to be set up, it would take around 10 secs"
-sleep 10s
+sleep 20s
 echo "Setting up a Minikube cluster..."
 
 while [ ! -e $HOME/.kube/config ];do
