@@ -1,9 +1,10 @@
 #!/bin/bash
+echo "Waiting for the environment to be set up, it would take around 10 secs"
+sleep 10s
 echo "Setting up a Minikube cluster..."
 
 while [ ! -e $HOME/.kube/config ];do
     cd $HOME && minikube start
-    sleep 4s
 done
 echo "minikube installed"
 cd $HOME/.kube && kubectl config view --minify --flatten > config
